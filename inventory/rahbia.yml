@@ -1,0 +1,8 @@
+all:
+  vars:
+    ansible_user: root
+    ansible_port: 8090
+  children:
+    single-node:
+      hosts:
+        ansible_host: 185.204.169.17
