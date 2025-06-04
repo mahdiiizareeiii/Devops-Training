@@ -1,7 +1,7 @@
 ---
 
 # true if IPv6 is needed
-network_ipv6_enable: true # sshd + ssh
+network_ipv6_enable: false # sshd + ssh
 
 # Paths of the config files
 ssh_client_config_file: /etc/ssh/ssh_config # ssh
@@ -31,10 +31,10 @@ ssh_client_password_login: false # ssh
 ssh_server_password_login: false # sshd
 
 # ports on which ssh-server should listen
-ssh_server_ports: ["22"] # sshd
+ssh_server_ports: ["8090"] # sshd
 
 # port to which ssh-client should connect
-ssh_client_port: "22" # ssh
+ssh_client_port: "8090" # ssh
 
 # one or more ip addresses, to which ssh-server should listen to.
 # Default is empty, but should be configured for security reasons!
@@ -60,7 +60,7 @@ ssh_login_grace_time: 30s
 ssh_max_auth_retries: 2
 
 # Specifies the maximum number of open sessions permitted from a given connection
-ssh_max_sessions: 10
+ssh_max_sessions: 3
 
 ssh_client_alive_interval: 300 # sshd
 ssh_client_alive_count: 3 # sshd
@@ -160,10 +160,10 @@ ssh_print_pam_motd: false # sshd
 ssh_print_last_log: false # sshd
 
 # false to disable serving ssh warning banner before authentication is allowed
-ssh_banner: false # sshd
+ssh_banner: true # sshd
 
 # path to file with ssh warning banner
-ssh_banner_path: /etc/ssh/banner.txt
+ssh_banner_path: /etc/issues
 
 # false to disable distribution version leakage during initial protocol handshake
 ssh_print_debian_banner: false # sshd (Debian OS family only)
