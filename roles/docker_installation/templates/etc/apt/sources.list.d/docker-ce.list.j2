@@ -9,4 +9,4 @@
 {% set repo = "test" %}
 {% endif %}
 
-deb [arch={{ docker_apt_arch | default('amd64') }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ repo }}
+deb [arch={{ docker_apt_arch | default('amd64') }}] {{ docker_repo.repo.url }} {{ ansible_distribution | lower }} {{ ansible_distribution_release }} {{ repo }}

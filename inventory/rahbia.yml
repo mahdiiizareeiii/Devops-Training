@@ -5,4 +5,4 @@ all:
   children:
     single-node:
       hosts:
-        ansible_host: 185.204.169.17
+        master:
