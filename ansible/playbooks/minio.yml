@@ -1,0 +1,6 @@
+- name: install and configuration minio service
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - minio_setup

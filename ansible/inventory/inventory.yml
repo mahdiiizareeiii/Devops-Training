@@ -6,6 +6,5 @@ all:
   children:
     single_node :
       hosts:
-        master:
-
+        master1:
 

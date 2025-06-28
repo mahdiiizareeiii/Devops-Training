@@ -5,3 +5,4 @@
   roles:
     - os_hardening
     - ssh_hardening
+    - docker_installation
